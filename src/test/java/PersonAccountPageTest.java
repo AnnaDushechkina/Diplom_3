@@ -17,7 +17,6 @@ public class PersonAccountPageTest extends BaseUITest {
     RegistrPage registrPage;
     User user;
     PersAccountPage persAccountPage;
-    UserApi userApi;
     String name;
     String email;
     String password;
@@ -33,7 +32,7 @@ public class PersonAccountPageTest extends BaseUITest {
         email = "Valdis@mail.ru";
         password = "123456";
         user = new User(email, password, name);
-        userApi.createUser(user);
+        UserApi.createUser(user);
 
         mainPage.clickLoginButton();
         loginPage.waitForLoad();

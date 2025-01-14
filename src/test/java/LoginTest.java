@@ -17,7 +17,6 @@ public class LoginTest extends BaseUITest {
     RegistrPage registrationPage;
     User user;
     PasswordRecoveryPage passwordRecoveryPage;
-    UserApi userApi;
     String name;
     String email;
     String password;
@@ -33,7 +32,7 @@ public class LoginTest extends BaseUITest {
         email = "Valdis@mail.ru";
         password = "123456";
         user = new User(email, password, name);
-        userApi.createUser(user);
+        UserApi.createUser(user);
     }
 
     @Test
